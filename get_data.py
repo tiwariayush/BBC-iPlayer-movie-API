@@ -16,6 +16,8 @@ ratings = []
 
 for movie in iplayer_movies['episodes']:
     title = movie['programme']['display_titles']['title']
+    image = movie['programme']['image']['pid']
+    prog = movie['programme']['pid']
 
     params = {
                 'api_key': API_KEY,
@@ -40,7 +42,9 @@ for movie in iplayer_movies['episodes']:
 
     result =  {
                 'title': title,
-                'rating': movie_rating 
+                'rating': movie_rating,
+                'image': image,
+                'prog': prog
                 }
 
     # Appending results for each movie in single file
