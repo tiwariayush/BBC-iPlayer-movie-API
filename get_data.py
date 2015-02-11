@@ -45,5 +45,3 @@ for movie in iplayer_movies['episodes']:
 
     # Appending results for each movie in single file
     ratings.append(result)
-
-print ratings
