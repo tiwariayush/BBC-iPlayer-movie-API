@@ -1,11 +1,25 @@
 <!-- DOCTYPE HTML -->
 
-
 <html>
     <head>
         <title>
             iPlayer Movie Ratings
         </title>
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
+ul {         
+          padding:0 0 0 0;
+          margin:0 0 0 0;
+      }
+      ul li {     
+          list-style:none;
+          margin-bottom:25px;           
+      }
+      ul li img {
+          cursor: pointer;
+      }
+</style>
     </head>
 
 <body>
@@ -13,12 +27,14 @@
     <br>
     <u>These are the movies currently playing on iPlayer:</u>
     <p></p>
-        <table>
-        %for movie in movies:
-            <tr>
-                <td> {{movie['title']}}:</td> <td>{{movie['rating']}}</td>
-            </tr>
-        %end
-        </table>
+        <div class="container">
+            <ul class="row">
+            %for movie in movies:
+                <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><a href="http://www.bbc.co.uk/iplayer/episode/{{movie['prog']}}" tagret="_blank">
+                <img src="http://ichef.bbci.co.uk/images/ic/144x144/{{movie['image']}}.jpg"><br>
+                 {{movie['title']}}: {{movie['rating']}}</a></li>
+            %end
+            </ul>
+        </div>
 </body>
 </html>
