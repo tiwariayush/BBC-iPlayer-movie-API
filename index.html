@@ -9,10 +9,16 @@
     </head>
 
 <body>
-
-    These are the movies currently playing on iplayer:
+    <h2> iPlayer Movie Ratings </h2>
+    <br>
+    <u>These are the movies currently playing on iPlayer:</u>
+    <p></p>
+        <table>
         %for movie in movies:
-            {{movie['title']}}: {{movie['rating']}}
+            <tr>
+                <td> {{movie['title']}}:</td> <td>{{movie['rating']}}</td>
+            </tr>
         %end
+        </table>
 </body>
 </html>
