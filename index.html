@@ -11,6 +11,8 @@
 <body>
 
     These are the movies currently playing on iplayer:
-
+        %for movie in movies:
+            {{movie['title']}}: {{movie['rating']}}
+        %end
 </body>
 </html>
