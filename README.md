@@ -19,3 +19,5 @@ Instructions to run the app
 1. `python views.py` - Server might take some time depending upon net connectivity
 
 2. Go to browser and open localhost:8080
+
+![alt tag](http://s2.postimg.org/h44qxns7d/bbc_ipayer.png)
